@@ -56,6 +56,7 @@ const TodoList = () => {
 
   return (
     <div className="todo-container">
+      <h1>TODO</h1>
       <form className="todo-form">
         {/* 입력 폼 */}
         <p>
@@ -69,10 +70,10 @@ const TodoList = () => {
           <input type="text" value={content} onChange={contentInput} />
         </p>
 
-        <button onClick={handleAddTodo}>추가</button>
+        <button onClick={handleAddTodo}>ADD</button>
       </form>
       <div className="todo-list">
-        <h2>Working</h2>
+        <h2>🎆Working</h2>
         {/* 작업 중인 항목 목록 */}
         {todos.map((index) => (
           <div className="todo-item" key={index.el}>
@@ -86,7 +87,7 @@ const TodoList = () => {
         ))}
       </div>
       <div className="todo-list">
-        <h2>Complete</h2>
+        <h2>😴Complete</h2>
         {/* 완료된 항목 목록 */}
         {doneTodos.map((index) => (
           <div className="todo-item" key={index.el}>
