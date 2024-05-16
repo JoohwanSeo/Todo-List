@@ -4,13 +4,10 @@ function TodoList() {
   // 제목과 내용을 관리하는 상태 변수와 상태 업데이트 함수
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
-
   // 할 일 목록을 관리하는 상태 변수와 상태 업데이트 함수
-  const [todos, setTodos] = useState([]);
-  
+  const [todos, setTodos] = useState([]);  
   // 완료된 할 일 목록을 관리하는 상태 변수와 상태 업데이트 함수
   const [completedTodos, setCompletedTodos] = useState([]);
-  
   // 입력 필드의 값을 관리하는 상태 변수와 상태 업데이트 함수
   const [inputValue, setInputValue] = useState("");
 
@@ -31,10 +28,7 @@ function TodoList() {
     // input값이 있는 경우에만 새로운 할 일을 추가
     if ((title, content)) {
       // 기존 할 일 목록에 새로운 할 일을 추가하여 업데이트
-      setTodos([
-        ...todos,
-        { title, content, task: inputValue, isCompleted: false },
-      ]);
+      setTodos([...todos, { title, content, task: inputValue, isCompleted: false }]);
       // input값을 초기화
       setInputValue("");
       setTitle("");
@@ -47,9 +41,7 @@ function TodoList() {
     // 기존 할 일 목록에서 선택된 할 일을 제외하고 새로운 목록을 생성
     const updatedTodos = [...todos];
     const completedTodo = updatedTodos.splice(index, 1)[0];
-
     completedTodo.isCompleted = true;
-
     setCompletedTodos([...completedTodos, completedTodo]);
     setTodos(updatedTodos);
   };
@@ -69,14 +61,11 @@ function TodoList() {
     }
   };
 
-
   // 할 일을 취소하는 함수
   const cancelTodo = (index) => {
     // 완료된 할 일 목록에서 선택된 할 일을 제외하고 새로운 목록을 생성
     const updatedCompletedTodos = [...completedTodos];
-    const canceledTodo = updatedCompletedTodos.splice(index, 1)[0];
-    
-    
+    const canceledTodo = updatedCompletedTodos.splice(index, 1)[0];  
     canceledTodo.isCompleted = false;
 
     setTodos([...todos, canceledTodo]);
