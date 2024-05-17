@@ -23,8 +23,8 @@ const TodoList = () => {
     if (title === "" || content === "") alert("제목과 내용을 입력해 주세요.");
 
     if (title && content) {
-      const newTodo = { el: Date.now(), title, content };
-      setTodos([...todos, newTodo]);
+      const nextTodo = { el: Date.now(), title, content };
+      setTodos([...todos, nextTodo]);
       setTitle("");
       setContent("");
     }
