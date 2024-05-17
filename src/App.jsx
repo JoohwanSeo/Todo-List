@@ -5,9 +5,8 @@ const App = () => {
   return (
     <Layout>
       <TodoContainer />
-    </Layout>
+    // </Layout>
   );
 };
 
 export default App;
- 

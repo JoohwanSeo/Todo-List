@@ -1,5 +1,7 @@
+
+
 const Layout = ({Children}) => {
-    return <main>{Children}</main>
+    return <main className="layout">{Children}</main>
 }
 
 export default Layout;
