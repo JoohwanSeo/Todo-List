@@ -1,4 +1,6 @@
 .layout {
+  background-color: #061d12;
+
   max-width: 1200px;
   min-width: 800px;
   margin: 0 auto;
@@ -7,32 +9,33 @@
 }
 
 .todo-container {
-  background-color: #061d12;
   font-family: "Roboto", sans-serif;
   display: flex;
   flex-direction: column;
-  align-items: center;
   margin-top: 30px;
-}
 
-.layout h1 {
-  font-size: 2.2em;
+  font-size: 50px;
   line-height: 1.1;
-  margin: 5px;
+  margin: 1px;
   padding-right: 790px;
   color: whitesmoke;
 }
+
 
 /* 입력 폼 */
 .todo-form {
   background-color: #506111;
   color: white;
   padding: 0 20px 0 20px;
-  margin-bottom: 50px;
-  display: ruby;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 2rem;
+  margin: 30px 0 30px 0;
+  display:ruby-text;
+}
+
+h2 {
+  font-family: "Roboto", sans-serif;
+  color: white;
+  font-size: 35px;
+  margin-left: 15px;
 }
 
 .todo-form input {
@@ -69,12 +72,11 @@
 }
 
 .todo-item {
+  color: whitesmoke;
   justify-content: space-between;
   align-items: center;
-  padding: 17px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
   margin: 10px;
+  flex-wrap: flex;
 }
 
 .todo-item h3 {
